@@ -1,0 +1,2 @@
+Statements: it's a complete command to be executed. It can include one or 
+more expressions
