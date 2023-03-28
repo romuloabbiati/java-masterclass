@@ -1,0 +1,46 @@
+Keywords: Keywords are words that were predefined in Java code that we 
+cannot use it.
+
+Variable: it's a data container that holds a value of some data type
+
+Data type: In Java every information has a data type like string, integer, 
+double, etc
+
+Expressions: it's a coding construct, that evaluates to a single value. 
+It's the right part of the code after the = sign.
+
+Primitive Data Type: byte, short long, int  / char / boolean / float, 
+double
+
+Wrapper classes: Byte, Short, Long, Integer / Character / Boolean / Float, 
+Double
+
+Integer/int: occupies 32 bits in memory and can store numbers from 
+-2147483648 to 2147483647
+
+Byte/byte: occupies 8 bits in memory and can store numbers from -128 to 
+127
+
+Short/short: occupies 16 bits in memory and can sotre numbers from -32768 
+to 32767
+
+Long/long: has a width of 64 bits and can store number from 
+-9223372036854775808 to 9223372036854775807
+
+String: The string created with class String is considered immutable in a 
+sense that when I concatenate a string with another string, instead of 
+Java append the second part to the new string, it actually creates another 
+string with both parts or strings and then place this new string in the 
+variable created. The original string will be discarded. Because of this 
+behaviour, if a code there are a lot of handling of strings, with 
+concatenations so on and so forth, this might cause some performance 
+issues, i.e. inefficiency, and then Java provides another class that 
+address this issue. The name of the class is StringBuilder.
+Although the StringBuilder class does not have the special features that 
+the Java class possess.
+
+Abbreviating operators: 
+there are 2 ways to abbreviate operators post-fix increment/decrement 
+operator or compound assignment operator
+post-fix incremente/decrement operator: result++; or result--;
+compound assignment operator: result += 1; or result -= 1;
