@@ -42,6 +42,16 @@ public class Hello {
 
         String s = (isDomestic) ? "This car is domestic" : "This car is not domestic";
         System.out.println(s);
+
+        double doubleVar = 20.00;
+        double secondDoubleVar = 80.00;
+        double result = (doubleVar + secondDoubleVar) * 100.00;
+        double remainder = result % 40.00;
+        boolean booleanVar = remainder == 0.00 ? true : false;
+        System.out.println(booleanVar);
+        if(!booleanVar) {
+            System.out.println("got some remainder");
+        }
     }
 
 }
