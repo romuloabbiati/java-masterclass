@@ -1,37 +1,37 @@
-public class Main {
+public class MethodChallenge {
 
     public static void main(String[] args) {
-        int playersPosition = calculateHighScorePosition(1500);
-        displayHighScorePosition("Tim", playersPosition);
 
-        playersPosition = calculateHighScorePosition(1000);
-        displayHighScorePosition("Tim", playersPosition);
+        int highScorePosition = calculateHighScorePosition(1500);
+        displayHighScorePosition("Tim", highScorePosition);
 
-        playersPosition = calculateHighScorePosition(500);
-        displayHighScorePosition("Tim", playersPosition);
+        highScorePosition = calculateHighScorePosition(1000);
+        displayHighScorePosition("Bob", highScorePosition);
 
-        playersPosition = calculateHighScorePosition(100);
-        displayHighScorePosition("Tim", playersPosition);
+        highScorePosition = calculateHighScorePosition(500);
+        displayHighScorePosition("Percy", highScorePosition);
 
-        playersPosition = calculateHighScorePosition(25);
-        displayHighScorePosition("Tim", playersPosition);
+        highScorePosition = calculateHighScorePosition(100);
+        displayHighScorePosition("Gilbert", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(25);
+        displayHighScorePosition("James", highScorePosition);
     }
 
-    public static void displayHighScorePosition(String playersName, int playersPosition) {
-        System.out.println(playersName + " managed to get into position " + playersPosition
-                        + " on the high score list.\n");
+    public static void displayHighScorePosition(String playerName, int highScorePosition) {
+        System.out.println(playerName + " managed to get into position "
+                + highScorePosition + " on the high score list");
     }
 
-    public static int calculateHighScorePosition(int playersScore) {
-        int number = 4;
-        if(playersScore >= 1000) {
-            number = 1;
-        } else if(playersScore >= 500) {
-            number = 2;
-        } else if(playersScore >= 100) {
-            number = 3;
-        } 
-        return number;
-    }
+    public static int calculateHighScorePosition(int playerScore) {
+
+        int position = 4;
+        if (playerScore >= 1000) {
+            position = 1;
+        } else if (playerScore >= 500) {
+            position = 2;
+        } else if (playerScore >= 100) {
+            position = 3;
+        }
 
 }
