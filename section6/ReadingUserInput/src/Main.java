@@ -12,7 +12,6 @@ public class Main {
             System.out.println(getInputFromScanner(currentYear));
         }
 
-
     }
 
     public static String getInputFromConsole(int currentYear) {
@@ -34,12 +33,32 @@ public class Main {
         System.out.println("Hi " + name + ", Thanks for taking the course!");
 
         System.out.println("What year were you born? ");
-        String dateOfBirth = scanner.nextLine();
 
-//        String dateOfBirth = System.console().readLine("What year were your born? ");
-        int age = currentYear - Integer.parseInt(dateOfBirth);
+        boolean validDOB = false;
+        int age = 0;
+
+        do {
+            System.out.println("Enter a year of birth >= " +
+                    (currentYear - 125) +" and <= " + (currentYear));
+            try {
+                age = checkDate(currentYear, scanner.nextLine());
+                validDOB = (age < 0) ? false : true;
+            } catch (NumberFormatException e) {
+                System.out.println("Characters not allowed! Try again!");
+            }
+        } while(!validDOB);
 
         return "So you are " + age + " years old";
+    }
+
+    public static int checkDate(int currentYear, String dateOfBirth) {
+        int dob = Integer.parseInt(dateOfBirth);
+        int minimumYear = currentYear - 125;
+
+        if((dob < minimumYear) || (dob > currentYear)) {
+            return -1;
+        }
+        return (currentYear - dob);
     }
 
 }
