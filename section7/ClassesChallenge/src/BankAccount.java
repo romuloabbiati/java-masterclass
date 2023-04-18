@@ -6,19 +6,30 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    public BankAccount() {
+        System.out.println("Empty constructor called!");
+    }
+
+    public BankAccount(String number, double balance, String customerName, String email, String phoneNumber) {
+        System.out.println("Account constructor with parameters called!");
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
     public void deposit(double amount) {
-        System.out.println("Your current balance is £" + this.balance);
         this.balance += amount;
-        System.out.println("You deposited " + amount + " and your balance is now £" + this.balance);
+        System.out.println("Deposit of $" + amount + " processed, Remaining balance = $" + this.balance);
     }
 
     public void withdraw(double amount) {
         if(this.balance - amount < 0.0) {
             System.out.println("You cannot withdraw that amount!");
         } else {
-            System.out.println("Your current balance is £" + this.balance);
             this.balance -= amount;
-            System.out.println("You withdrew " + amount + " and your balance is now £" + this.balance);
+            System.out.println("Withdrawal of $" + amount + " processed, Remaining balance = $" + this.balance);
         }
     }
 
