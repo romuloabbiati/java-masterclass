@@ -1,0 +1,14 @@
+objects are instances of a class. Every time I use the "new" keyword 
+before the name constructor of a class, I am creating an object in memory, 
+or an instance of that class used.
+
+instaces as mentioned above, are instances or objects in memory of the 
+class used to generate the instance/object. The words instance and object 
+are used interchangeably.
+
+Class can be seen as a blueprint. Using the class I can generate/create 
+many instances of that class as I like or objects.
+
+Reference can be seen as an address or a reference to the object in memory 
+created for the class. Reference is a pointer that contains the address 
+where that object was stored in memory.
