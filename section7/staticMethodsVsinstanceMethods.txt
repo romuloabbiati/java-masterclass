@@ -1,0 +1,9 @@
+Static methods: cannot instantiate instance variables, cannot use the THIS 
+keyword, cannot instance or call instance methods.
+Static methods are used when it is not required to do any of the above.
+
+Instance Methods: can instantiate instance variables and instance methods. 
+Can use static methods and static variables. To use instance methods, it 
+needs to create a new instance of the class and assign to a variable. From 
+the newly created variable, use the dot notation to access the instance 
+method.
