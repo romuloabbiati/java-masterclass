@@ -1,6 +1,7 @@
 public class Animal {
 
-    private String type;
+    protected String type; // protected means that access to this instance field is given to
+    // subclasses and also classes in the same package
     private String size;
     private double weight;
 
