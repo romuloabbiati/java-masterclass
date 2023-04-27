@@ -1,14 +1,14 @@
-public class Refrigerator {
+public class CoffeeMaker {
 
     private boolean hasWorkToDo;
 
-    public Refrigerator(boolean hasWorkToDo) {
+    public CoffeeMaker(boolean hasWorkToDo) {
         this.hasWorkToDo = hasWorkToDo;
     }
 
-    public void orderFood() {
+    public void brewCoffee() {
         if(hasWorkToDo) {
-            System.out.println("Ordering more milk...");
+            System.out.println("Brewing coffee...");
             setHasWorkToDo(false);
         } else {
             System.out.println("No work to be done!");
