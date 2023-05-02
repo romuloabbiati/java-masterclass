@@ -1,0 +1,40 @@
+
+- meals are composed of 3 items: burger, drink and side
+- the app lets Bill select the type of burger and some of the additional 
+items or extras that can be added to the burgers; as well as the actual 
+pricing
+- the meal order should be composed of exactly: 1 burger, 1 drink & 1 side
+- the most common meal order should be created without any arguments: 
+regular burger, small coke and small fries
+- I should be able to create other meal orders, by specifying different 
+burgers, drinks and side item (fries or salad)
+
+DRINK & SIDE ITEM
+- DRINK: should have at least type (coke, coke zero, orange juice), size 
+and price. The price should change for each size
+- SIDE: it needs at least a type and price
+
+BURGER:
+- burger type, base price and up to max of 3 extra toppings
+- the constructor should include only the burger type and price
+- extra toppings on a burger need to be added somehow, and priced 
+according to their type
+
+THE DELUXE BURGER BONUS
+- create a deluxe burger meal with a deluxe burger, that has a set price, 
+so that any additional toppings do not change the price
+- the deluxe burger should have room for an additional 2 toppings
+
+THE CODE:
+- Create a default meal that uses the no-args constructor
+- create a meal with a deluxe burger, where all items, drink, side item 
+and toppings up to 5 extra toppings are included in the burger price
+
+FOR EACH MEAL ORDER, I'LL WANT TO PERFORM THESE FUNCTIONS:
+- add some additional toppings to the burger
+- change the size of the drink
+- print the itemized list. This should include the price of the burger, 
+any extra toppings, the drink price based on size, and the side item 
+price
+- print the total due amount for the meal
+
