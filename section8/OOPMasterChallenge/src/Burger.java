@@ -47,4 +47,8 @@ public class Burger {
         }
         this.toppings.add(element);
     }
+
+    public double getPrice() {
+        return price;
+    }
 }

@@ -9,7 +9,7 @@ public class Order {
     }
 
     public Order(Burger burger) {
-        // TODO: Deluxe burger
+        this(burger, new Drink("Coke", "Large"), new Side("Fries"));
     }
 
     public Order(Burger burger, Drink drink, Side side) {
@@ -40,5 +40,13 @@ public class Order {
 
     public void setSide(Side side) {
         this.side = side;
+    }
+
+    public double getTotalPrice() {
+        double totalPrice = 0.0;
+        totalPrice += this.burger.getPrice();
+        totalPrice += this.side.getPrice();
+        totalPrice += this.drink.getPrice();
+        return totalPrice;
     }
 }
