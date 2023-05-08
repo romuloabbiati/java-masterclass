@@ -33,6 +33,26 @@ public class Main {
         int[] largerArray = Arrays.copyOf(thirdArray, 15);
         System.out.println(Arrays.toString(largerArray));
 
+        // to use the Arrays.binarySearch() method, the array must be sorted.
+        // to arguments are passed, the array (or sorted array) and the element you are looking for
+        String[] sArray = {"Able", "Jane", "Mark", "Ralph", "David"};
+        Arrays.sort(sArray);
+        System.out.println(Arrays.toString(sArray));
+        if(Arrays.binarySearch(sArray, "Mark") >= 0) {
+            System.out.println("Found Mark in the list");
+        }
+
+        // the Arrays.equals(array1, array2) compares 2 arrays, if they are equal it will return true
+        // otherwise it will return false. To be equal, the elements must have the same type, same order and
+        // same number of elements
+        int[] s1 = {1, 2, 3, 4, 5};
+        int[] s2 = {1, 2, 3, 4 ,5, 0};
+        if(Arrays.equals(s1, s2)) {
+            System.out.println("Arrays are equal");
+        } else {
+            System.out.println("Arrays are not equal");
+        }
+
     }
 
     public static int[] getRandomArray(int len) {
