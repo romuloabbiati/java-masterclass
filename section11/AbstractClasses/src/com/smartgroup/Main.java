@@ -6,24 +6,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Dog dog = new Dog("Wolf", "big", 100.00);
+//        Animal animal = new Animal("animal", "big", 100.0);
+        Dog dog = new Dog("Wolf", "big", 100.0);
         dog.makeNoise();
         doAnimalStuff(dog);
 
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(dog);
-        animals.add(new Dog("German Shephard", "big", 150.00));
-        animals.add(new Fish("Goldfish", "small", 1.00));
-        animals.add(new Fish("Barracuda", "big", 75.00));
-        animals.add(new Fish("Pug", "small", 20.00));
+        animals.add(new Dog("German Shepard", "big", 150.0));
+        animals.add(new Fish("Goldfish", "small", 1.0));
+        animals.add(new Fish("Barracuda", "big", 75.0));
+        animals.add(new Dog("Pug", "small", 20));
+
+        animals.add(new Horse("Clydesdale", "big", 1000.0));
 
         for(Animal animal : animals) {
             doAnimalStuff(animal);
+            if(animal instanceof Mammal currentMammal) {
+                currentMammal.shedHair();
+            }
         }
 
     }
 
-    public static void doAnimalStuff(Animal animal) {
+    private static void doAnimalStuff(Animal animal) {
         animal.makeNoise();
         animal.move("slow");
     }
