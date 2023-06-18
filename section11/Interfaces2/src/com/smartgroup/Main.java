@@ -1,6 +1,5 @@
 package com.smartgroup;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,20 +22,18 @@ public class Main {
 //        flier.land();
         inFlight(flier);
         inFlight(new Jet());
-
-        Truck truck = new Truck();
+        Trackable truck = new Truck();
         truck.track();
 
         double kmsTravelled = 100.0;
-        double milesTravelled = kmsTravelled * FlightEnabled.MILES_TO_KM;
-        System.out.printf("The truck travelled  %.2f km or %.2f miles%n", kmsTravelled, milesTravelled);
+        double milesTravelled = kmsTravelled * FlightEnabled.KM_TO_MILES;
+        System.out.printf("The truck travelled %.2f km or %.2f miles%n",
+                kmsTravelled, milesTravelled);
 
-//        ArrayList<FlightEnabled> fliers = new ArrayList<>();
-//        fliers.add(bird);
         LinkedList<FlightEnabled> fliers = new LinkedList<>();
         fliers.add(bird);
 
-        List<FlightEnabled> betterFliers = new ArrayList<>();
+        List<FlightEnabled> betterFliers = new LinkedList<>();
         betterFliers.add(bird);
 
         triggerFliers(fliers);
@@ -74,5 +71,4 @@ public class Main {
             flier.land();
         }
     }
-
 }
